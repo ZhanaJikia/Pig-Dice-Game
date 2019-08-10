@@ -10,7 +10,7 @@
     clear: both;
 }
 
-body {
+section {
     width: 100%;
     background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(./imgs/back.jpg);
     background-size: cover;
@@ -23,7 +23,8 @@ body {
 }
 
 .wrapper {
-    width: 1000px;
+    width: 60%;
+    border-radius: 7px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,6 +32,10 @@ body {
     background-color: #fff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
 }
 
 .player-0-panel,
@@ -73,7 +78,7 @@ body {
 }
 
 .player-current-box {
-    background-color: #EB4D4D;
+    background-color: rgb(109, 187, 206);
     border-radius: 7px;
     color: #fff;
     width: 40%;
@@ -140,7 +145,7 @@ i {
 }
 
 .winner { background-color: #f7f7f7; }
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.winner .player-name { font-weight: 300; color: rgb(115, 216, 84); }
 
 .final-score {
     position: absolute;
@@ -158,6 +163,10 @@ i {
     padding: 10px;
     width: 160px;
     text-transform: uppercase;
+}
+
+.final-score:hover {
+    color: #EB4D4D;
 }
 
 *:focus {outline: none;}

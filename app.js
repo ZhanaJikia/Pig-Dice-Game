@@ -17,7 +17,6 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
             document.getElementById('dice-1').style.display = 'block';
             document.getElementById('dice-2').style.display = 'block';
 
-            // var diceDOM = document.querySelector('.dice');
             document.getElementById('dice-1').src = './CSS/imgs/dice-' + dice1 + '.png';
             document.getElementById('dice-2').src = './CSS/imgs/dice-' + dice2 + '.png';
 
@@ -58,20 +57,20 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
         // check who is winner
         if (scores[activePlayer] >= winningScore) {
+            
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
             hide();
-            // document.getElementById('dice-1').style.display = 'none';
-            // document.getElementById('dice-2').style.display = 'none';
             document.querySelector('.player-'+ activePlayer + '-panel').classList.add('winner');
             document.querySelector('.player-'+ activePlayer + '-panel').classList.remove('active');
             gamePlaying = false;
 
 
         } else {
-            // next player
+
             nextPlayer();
         }
     }  else {
+
         gamePlaying = false;
     }
 
@@ -79,21 +78,15 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
 
 function nextPlayer () {
-    // next player
+
     activePlayer === 0 ?  activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
 
-    // toggle adds if it needs and removes...
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
 
-    // document.querySelector('.player-0-panel').classList.remove('active');
-    // document.querySelector('.player-1-panel').classList.add('active');
-
-    // document.getElementById('dice-1').style.display = 'none';
-    // document.getElementById('dice-2').style.display = 'none';
     hide();
 
 };
